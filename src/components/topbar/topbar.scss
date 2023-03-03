@@ -1,0 +1,94 @@
+@import "../../style.scss";
+
+.topbar{
+    @include themify($themes){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        padding: 10px 20px;
+        background-color: themed(bgColorSoft);
+        border-bottom: 1px solid themed(borderColor);
+        color: themed(textColor);
+        top: 0;
+        position: sticky;
+
+        .left{
+            display: flex;
+            flex: 1;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+
+            span{
+                font-size: 30px;
+                font-weight: 600;
+                // color: darkblue;
+                color: themed(logoColor);
+            }
+
+            .search{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                background-color: thmemed(bgColor);
+                padding: 5px;
+                border-radius: 10px;
+                border: 1px solid themed(borderColor);
+
+                input{
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    padding: 5px;
+                    font-size: 16px;
+                    width: 300px;
+                    color: themed(textColor);
+                }
+            }
+        }
+
+        .right{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 20px;
+
+            .user{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+
+                img{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                span{
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: themed(textColor);
+                }
+            }
+        }
+
+        .icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            // font-size: 20px;
+            // color: darkgray;
+
+            // &:focus:hover{
+            //     color: darkgray;
+            //     cursor: pointer;
+            // }
+        }
+    }
+} 

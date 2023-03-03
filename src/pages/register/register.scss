@@ -1,0 +1,86 @@
+.register{
+    height: 100vh;
+    // width: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(124, 233, 342, 0.5);
+    // background: url("/src/assets/background.jpg");
+    // background: url("https://www.pexels.com/photo/pens-near-keyboard-and-paper-clips-1558690");
+
+    .card{
+        display: flex;
+        width: 50%;
+        border-radius: 15px;
+        min-height: 60%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row-reverse;
+
+        .left{
+            flex: 1;  
+            // background: linear-gradient(rgba(1,1,1,0.5), rgba(25, 28, 22, 0.5)) url("https://pixabay.com/photos/student-typing-keyboard-text-woman-849822/") center;
+            // background-size: cover;
+            background: #fff999;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h1{
+                font-weight: 900;
+                line-height: 40px;
+            }
+            // span{}
+            // p{}
+            button{
+                width: 50%;
+                padding: 5px;
+                // border: none;
+                background-color: white;
+                font-weight: 900;
+                cursor: pointer;
+            }
+        }
+
+        .right{
+            flex: 1;
+            background: #fff;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            justify-content: center;
+
+            h1{
+                font-size:48px;
+            }
+
+            form{
+                display: flex;
+                flex-direction: column;
+                // justify-content: space-around;
+                gap: 24px;
+
+                input{
+                    padding: 15px 10px;
+
+                    // input:focus{
+                    //     border: none;
+                    // }
+                }
+                input:focus{
+                    border: none;
+                }
+
+                button{
+                    padding: 15px 10px;
+                    width: 50%;
+                    // font-size: large;
+                    font-weight: 900;
+                }
+                // span{}
+            }
+        }
+    }
+}

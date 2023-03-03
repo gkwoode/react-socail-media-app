@@ -1,0 +1,7 @@
+@import '../../stle.scss';
+
+.stories{
+    @include themify($themes){
+        
+    }
+}

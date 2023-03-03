@@ -1,0 +1,84 @@
+@import "../../style.scss";
+
+.leftbar{
+    @include themify($themes){
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 70px);
+    overflow: scroll;
+    background-color: themed(bgColor);
+    color: themed(textColor);
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px;
+        gap: 20px;
+        background-color: themed(bgColorSoft);
+
+        .menu{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 15px;
+
+            span{
+                font-size: 14px;
+            }
+
+            .user{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                cursor: pointer;
+                gap: 15px;
+
+                img{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                span{
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+
+            .item{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                cursor: pointer;
+                gap: 15px;
+
+                img{
+                    width: 30px;
+                    // height: 30px;
+                }     
+                
+                span{
+                    font-size: 16px;
+                }
+            }
+        }
+
+        hr{
+            margin: 10px 0;
+            border: none;
+            height: 0.7px;
+            background-color: themed(borderColor);
+        }
+    }
+}
+}
