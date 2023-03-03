@@ -13,7 +13,7 @@ const Rightbar = () => {
             <div className="container">
                 {/* Online Friends Section */}
                 <div className="item">
-                    <span>Friend Requests</span>
+                    <span className='title'>Friend Requests</span>
                     <div className="user">
                         <div className="userInfo">
                             <img src={godwin} alt="" />
@@ -37,7 +37,7 @@ const Rightbar = () => {
                 </div>
                 {/* Latest Activities Section */}
                 <div className="item">
-                    <span>Latest Activities</span>
+                    <span className='title'>Latest Activities</span>
                     <div className="user">
                         <div className="userInfo">
                             <img src={godwin} alt="" />
@@ -74,11 +74,17 @@ const Rightbar = () => {
                 {/* Contacts Section */}
                 <div className="item">
                     <div className="contacts">
-                        <span>Contacts</span>
+                        <span className='title'>Contacts</span>
                         <div className="contactsIcons">
-                            <VideoCallRoundedIcon />
-                            <SearchRoundedIcon />
-                            <MoreHorizRoundedIcon />
+                            <div className="icon">
+                                <VideoCallRoundedIcon />
+                            </div>
+                            <div className="icon">
+                                <SearchRoundedIcon />
+                            </div>
+                            <div className="icon">
+                                <MoreHorizRoundedIcon />
+                            </div>                            
                         </div>
                     </div>
                     <div className="user">

@@ -1,0 +1,133 @@
+@import "../../style.scss";
+
+.post{
+    padding: 0 15px;     
+
+    @include themify($themes){
+        .container{
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            // User Style: Profile Picture, Name, Time, and Option
+            .user{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+    
+                .userLeft{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    align-items: center;
+                        
+                        img{
+                            width: 35px;
+                            height: 35px;
+                            object-fit: cover;
+                            border-radius: 50%;
+                            cursor: pointer;
+                        }
+    
+                        .details{
+                            display: flex;
+                            flex-direction: column;
+    
+                            .name{
+                                font-weight: 500;
+                                font-size: 16px;
+                                cursor: pointer;
+                                // color: themed(textColor);
+    
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+    
+                            .time{
+                                font-size: 12px;
+                                color: themed(textColorSoft);
+                            }
+                        }
+                }
+    
+                .userRight{
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    color: themed(textColor);
+                    transition: 1s ease-in-out;
+
+                    &:hover{  
+                        background-color: themed(bgColorSoft);
+                    }
+                }
+            }
+
+            .postInfo{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                span{
+                    font-size: 14px;
+                    color: themed(textColor);
+                    // line-height: 1.1;
+                }
+    
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                }
+            }
+
+            .postActions{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 50px;
+    
+                .like, .comment, .share{
+                    height: 35px;
+                    width: 140px;;
+                    border-radius: 5px;
+                    // background-color: themed(bgColorSoft);
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    color: themed(textColor);
+                    transition: 1s ease-in-out;
+
+                    &:hover{  
+                        background-color: themed(bgColorSoft);
+                    }
+                }
+            }
+
+            hr{
+                margin: 10px 0;
+                border: none;
+                height: 0.7px;
+                background-color: themed(borderColor);
+                margin: 0 50px;
+                opacity: 0.5;
+            }
+
+        }
+    }
+}

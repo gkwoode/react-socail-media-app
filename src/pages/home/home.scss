@@ -2,12 +2,11 @@
 
 .home{
     @include themify($themes){
-        background-color: themed(bgColor);
-        height: 100vh;
+        background-color: themed(bgColorSoft);
         padding: 20px 20px;
 
         .container{
-            background-color: themed(bgColorSoft);
+            background-color: themed(bgColor);
         }
     }
 }

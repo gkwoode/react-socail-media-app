@@ -21,6 +21,7 @@ const Leftbar = () => {
                         <img src={currentUser.profilePicture} alt="" />
                         <span>{currentUser.name}</span>
                     </div>
+                    <hr />
                     <div className="item">
                         <img src={friends} alt="" />
                         <span>Friends</span>
@@ -36,7 +37,7 @@ const Leftbar = () => {
                 </div>
                 <hr />
                 <div className="menu">
-                    <span>Others</span>
+                    {/* <span className='other'>Others</span> */}
                     <div className="item">
                         <img src={gallery} alt="" />
                         <span>Gallery</span>

@@ -5,28 +5,51 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 50px;
+        height: 40px;
         padding: 10px 20px;
-        background-color: themed(bgColorSoft);
+        background-color: themed(bgColor);
         border-bottom: 1px solid themed(borderColor);
         color: themed(textColor);
         top: 0;
         position: sticky;
 
+        // Left items
         .left{
             display: flex;
             flex: 1;
             align-items: center;
             justify-content: flex-start;
-            gap: 20px;
+            gap: 10px;
 
             span{
                 font-size: 30px;
                 font-weight: 600;
-                // color: darkblue;
                 color: themed(logoColor);
+                padding-right: 55px;
             }
 
+            .icons{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                object-fit: cover;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                transition: 1s all ease-in-out;
+    
+                .icon{
+                    font-size: 24px;
+                    color: themed(textColor);
+                }
+    
+                &:hover{
+                    background-color: themed(bgColorSoft);
+                }
+            }
+
+            // Search bar
             .search{
                 display: flex;
                 align-items: center;
@@ -36,6 +59,12 @@
                 padding: 5px;
                 border-radius: 10px;
                 border: 1px solid themed(borderColor);
+                margin-left: 50px;
+
+                .icon{
+                    cursor: pointer;
+                    // color: themed(textColorSoft);
+                }
 
                 input{
                     border: none;
@@ -49,18 +78,42 @@
             }
         }
 
+        // Right items
         .right{
             flex: 1;
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            gap: 20px;
+            gap: 10px;
+
+            .icons{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                object-fit: cover;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                transition: 1s all ease-in-out;
+    
+                .icon{
+                    font-size: 24px;
+                    color: themed(textColor);
+                }
+    
+                &:hover{
+                    background-color: themed(bgColorSoft);
+                }
+            }
 
             .user{
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 gap: 10px;
+                cursor: pointer;
+                margin-left: 30px;
 
                 img{
                     width: 40px;
@@ -77,18 +130,26 @@
             }
         }
 
-        .icon{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            // font-size: 20px;
-            // color: darkgray;
+        // .icons{
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
+        //     gap: 20px;
+        //     cursor: pointer;
+        //     object-fit: cover;
+        //     width: 40px;
+        //     height: 40px;
+        //     border-radius: 50%;
+        //     transition: 1s all ease-in-out;
 
-            // &:focus:hover{
-            //     color: darkgray;
-            //     cursor: pointer;
-            // }
-        }
+        //     .icon{
+        //         font-size: 24px;
+        //         color: themed(textColor);
+        //     }
+
+        //     &:hover{
+        //         background-color: themed(bgColorSoft);
+        //     }
+        // }
     }
 } 

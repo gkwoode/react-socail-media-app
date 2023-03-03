@@ -7,11 +7,12 @@
     flex-direction: column;
     justify-content: space-between;
     position: sticky;
-    top: 70px;
-    height: calc(100vh - 70px);
+    top: 60px;
+    height: calc(100vh - 60px);
     overflow: scroll;
     background-color: themed(bgColorSoft);
     color: themed(textColor);
+    padding-top: 5px;
 
     &::-webkit-scrollbar{
         display: none;
@@ -21,39 +22,55 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 15px;
-        // margin: 15px;
-        // padding-right: 10px;
+        padding: 15px 0;
+        padding-right: 20px;
         gap: 20px;
-        // background-color: themed(bgColorSoft);
-        // box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.65);
-        // -webkit-box-shadow: 0px 0px 5x 0px rgba(0,0,0,0.65);
-        // -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.65);
 
+        // Three item containers: Friend Requests, Latest Activities, and Onilne Contacts
         .item{
+            border-radius: 10px;
             display: flex;
             flex-direction: column;
             gap: 15px;
             padding: 15px;
+            justify-content: space-between;
             background-color: themed(bgColor);
             box-shadow: -1px 1px 1px 1px rgba(0,0,0,0.15);
             -webkit-box-shadow: -1px 1px 1x 1px rgba(0,0,0,0.15);
             -moz-box-shadow: -1px 1px 1px 1px rgba(0,0,0,0.15);
-            // box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.09);
-            // -webkit-box-shadow: 0px 0px 15x 1px rgba(0,0,0,0.09);
-            // -moz-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.09);
 
             .contacts{
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                align-items: center;
+                // justify-items: center;
+
+                span{
+                    padding-top: 5px;
+                }
 
                 .contactsIcons{
                     display: flex;
                     flex-direction: row;
-                    gap: 20px;
+                    gap: 5px;
                     align-items: center;
+                    justify-content: center;                    
+
+                    .icon{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 33px;
+                        height: 33px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        cursor: pointer;
+                        transition: 1s all ease-in-out;
+
+                        &:hover{
+                            background-color: themed(bgColorSoft);
+                        }
+                    }
                 }
             }
 
@@ -61,7 +78,7 @@
             span{
                 font-size: 18px;
                 font-weight: 600;
-                // color: grey;
+                cursor: pointer;
             }
 
             .user{
@@ -84,6 +101,7 @@
                         height: 30px;
                         border-radius: 50%;
                         object-fit: cover;
+                        cursor: pointer;
                     }
 
                     .online{
@@ -118,6 +136,7 @@
                     font-size: 14px;
                     font-weight: normal;
                     color: gray;
+                    cursor: default;
                 }
 
                 // Buttons: Accept and Decline styling
@@ -133,16 +152,17 @@
                         cursor: pointer;
                         padding: 5px 10px;
                         border-radius: 5px;
+                        cursor: pointer;
 
                         &:first-child{
-                            background-color: darkblue;
+                            background-color: #0054b4;
                             color: white;
                             // color: darkblue;
                             // border: 2px solid darkblue;
                         }
 
                         &:last-child{
-                            background-color: darkred;
+                            background-color: #D21404;
                             color: white;
                             // color: darkred;
                             // border: 2px solid darkred;

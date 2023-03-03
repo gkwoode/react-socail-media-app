@@ -1,7 +1,142 @@
-@import '../../stle.scss';
+@import '../../style.scss';
 
 .stories{
+    padding: 0 15px;
+
     @include themify($themes){
-        
+        .container{
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+
+            hr{
+                margin: 0 15px;
+                border: none;
+                height: 0.7px;
+                background-color: themed(borderColor);
+                opacity: 0.3;
+            }
+            
+
+            .titleContainer{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                padding: 0 15px;
+                padding-top: 15px;
+                font-size: 16px;
+                font-weight: 500;
+                color: themed(textColor);
+
+                .title{
+                    cursor: pointer;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5px;
+                }
+            }
+
+            .storyContainer{
+                padding: 15px;
+                display: flex;
+                flex-direction: row;
+                height: 200px;
+                gap: 10px;
+                margin-bottom: 20px;
+                // border-radius: 10px;
+
+                // Cuurent User Story
+                #user{
+                    flex: 1;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    position: relative;
+                    box-shadow: -1px 1px 1px 1px rgba(0,0,0,0.15);
+                    -webkit-box-shadow: -1px 1px 1x 1px rgba(0,0,0,0.15);
+                    -moz-box-shadow: -1px 1px 1px 1px rgba(0,0,0,0.15);
+                    cursor: pointer;
+                    transition: 1s all ease-in-out;
+                
+                        &:hover img{
+                            transform: scale(1.1);
+                        }
+                    
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: 1s all ease-in-out;
+                    }
+                
+                    span{
+                        width: 100%;
+                        height: 30%;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        color: whitesmoke;
+                        background-color: rgba(0,0,0,0.5);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    
+                        p{
+                            font-size: 14px;
+                            font-weight: 500;
+                        }
+                    
+                        .addIcon{
+                            color: #0047ab;
+                            background-color: white;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            
+                // Other User Stories
+                .story{
+                    flex: 1;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    position: relative;
+                    box-shadow: -1px 1px 1px 1px rgba(0,0,0,0.15);
+                    -webkit-box-shadow: -1px 1px 1x 1px rgba(0,0,0,0.15);
+                    -moz-box-shadow: -1px 1px 1px 1px rgba(0,0,0,0.15);
+                    cursor: pointer;
+                    transition: 1s all ease-in-out;
+                
+                    &:hover img{
+                        transform: scale(1.1);
+                    }
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: 1s all ease-in-out;
+                    
+                        // &:hover{
+                        //     transform: scale(1.1);
+                        // }
+                    }
+                
+                    span{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        padding: 10px;
+                        // font-size: 14px;
+                        color: whitesmoke;
+                        background-color: rgba(0,0,0,0.5);
+                    }
+                }
+            }
+        }
     }
 }

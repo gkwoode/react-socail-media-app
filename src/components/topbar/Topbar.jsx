@@ -22,18 +22,31 @@ const Topbar = () => {
                 <Link to="/" style={{textDecoration: "none"}}>
                     <span>gksocial</span>
                 </Link>
-                <HomeRoundedIcon className="icon"/>
-                {darkMode ? <LightModeRoundedIcon className="icon" onClick={toggleDarkMode}/> : <DarkModeRoundedIcon className="icon" onClick={toggleDarkMode}/>}
-                <GridViewRoundedIcon className="icon"/>
+                <div className="icons">
+                    <HomeRoundedIcon className="icon"/>
+                </div>
+                <div className="icons">
+                    {darkMode ? <LightModeRoundedIcon className="icon" onClick={toggleDarkMode}/> :
+                     <DarkModeRoundedIcon className="icon" onClick={toggleDarkMode}/>}
+                </div>
+                <div className="icons">
+                    <GridViewRoundedIcon className="icon"/>
+                </div>
                 <div className="search">
                     <SearchRoundedIcon className="icon"/>
                     <input type="text" placeholder="Search" />
                 </div>
             </div>
             <div className="right">
-                <PersonRoundedIcon className="icon"/>
-                <EmailRoundedIcon className="icon"/>
-                <NotificationsRoundedIcon className="icon"/>
+                <div className="icons">
+                    <PersonRoundedIcon className="icon"/>
+                </div>
+                <div className="icons">
+                    <EmailRoundedIcon className="icon"/>
+                </div>
+                <div className="icons">
+                    <NotificationsRoundedIcon className="icon"/>
+                </div>
                 <div className="user">
                     <img src={currentUser.profilePicture} alt="" />
                     <span>{currentUser.name}</span>
