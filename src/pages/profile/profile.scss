@@ -1,0 +1,99 @@
+@import "../../style.scss";
+
+.profile{
+    @include themify($themes){
+        background-color: themed(bgColorSoft);
+        height: 100vh;
+
+        .profileContainer{
+            padding: 0 20px;
+            // align-items: center;
+            // justify-content: center;
+
+            .coverImage{
+                width: 100%;
+                height: 250px;
+                // object-fit: cover;
+                // position: relative;
+
+                img{
+                    width: 100%;
+                    height: 250px;
+                    object-fit: cover;
+                    // border-radius: 15px;
+                    border-bottom-left-radius: 15px;
+                    border-bottom-right-radius: 15px;
+                }
+            }
+            
+            .profileDesc{
+                display: flex;
+                justify-content: space-between;
+                align-items: end;
+                margin: 0 30px;
+
+                img{
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    border: 5px solid themed(bgColorSoft);
+                    margin-top: -75px;
+                    // display: flex;
+                    align-self: center;
+                }
+
+                .profileDetails{
+                    // margin-left: -50px;
+                    padding-bottom: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .name{
+                        font-size: 28px;
+                        font-weight: 900;
+                        color: themed(textColor);
+                    }
+
+                    .locationInfo{
+                        font-size: 16px;
+                        color: themed(textColor);
+                        display: flex;
+                        align-items: end;
+                        gap: 25px;
+
+                        .location{
+                            display: flex;
+                            align-items: center;
+                            gap: 1px;
+
+                            span{
+                                font-size: 18px;
+                                color: themed(textColor);
+                            }
+                        }
+
+                        button{
+                            cursor: pointer;
+                            padding: 5px 10px;
+                            border-radius: 5px;
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: white;
+                            border: none;
+                            background-color: #0054b4;
+                        }
+                    }
+                }
+
+                .socialHandles{
+                    padding-bottom: 5px;
+                    display: flex;
+                    gap: 5px;
+                }
+                
+            }
+        }
+    }
+}

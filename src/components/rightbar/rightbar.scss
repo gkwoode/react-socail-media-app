@@ -117,7 +117,7 @@
                     // Fonts: Name and activity styling
                     p{
                         font-size: 14px;
-                        color: gray;
+                        color: themed(textColorSoft);
 
                         span{
                             font-weight: 500;
@@ -135,7 +135,7 @@
                 .time{
                     font-size: 14px;
                     font-weight: normal;
-                    color: gray;
+                    color: themed(textColorSoft);
                     cursor: default;
                 }
 
@@ -152,20 +152,15 @@
                         cursor: pointer;
                         padding: 5px 10px;
                         border-radius: 5px;
-                        cursor: pointer;
 
                         &:first-child{
                             background-color: #0054b4;
                             color: white;
-                            // color: darkblue;
-                            // border: 2px solid darkblue;
                         }
 
                         &:last-child{
                             background-color: #D21404;
                             color: white;
-                            // color: darkred;
-                            // border: 2px solid darkred;
                         }
                     }
                 }

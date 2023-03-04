@@ -1,6 +1,7 @@
 @import "../../style.scss";
 
 .home{
+    // z-index: -1;
     @include themify($themes){
         background-color: themed(bgColorSoft);
         padding: 20px 20px;

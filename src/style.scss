@@ -1,11 +1,16 @@
+*{
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
 $themes: (
     light: (
         textColor: black,
-        textColorSoft: darkgray,
+        textColorSoft: #555555,
         bgColorSoft: #f0f0f0,
         bgColor: white,
         logoColor: darkblue,
-        borderColor: darkgray,
+        borderColor: rgb(90, 90, 90, 0.3),
     ),
     dark: (
         textColor: whitesmoke,
@@ -13,7 +18,7 @@ $themes: (
         bgColorSoft: #252525,
         bgColor: #101217,
         logoColor: white,
-        borderColor: lightgray,
+        borderColor: rgb(211, 211, 211, 0.3),
     ),
 );
 

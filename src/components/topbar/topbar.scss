@@ -9,9 +9,16 @@
         padding: 10px 20px;
         background-color: themed(bgColor);
         border-bottom: 1px solid themed(borderColor);
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
         color: themed(textColor);
         top: 0;
+        position:-webkit-sticky;
+        position:-moz-sticky;
+        position:-ms-sticky;
+        position:-o-sticky;
         position: sticky;
+        z-index: 1;
 
         // Left items
         .left{
@@ -57,7 +64,7 @@
                 gap: 10px;
                 background-color: thmemed(bgColor);
                 padding: 5px;
-                border-radius: 10px;
+                border-radius: 50px;
                 border: 1px solid themed(borderColor);
                 margin-left: 50px;
 

@@ -5,12 +5,15 @@ import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
 import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
 import ThumbUpOffAltRoundedIcon from '@mui/icons-material/ThumbUpOffAltRounded';
 import { Link } from "@mui/material";
+import { useState } from "react";
+import Comments from "../comments/Comments";
 
 const Post = ({post}) => {
 
     // const [liked, setLiked] = useState(false);
     const liked = false;
-
+    
+    const [commentOpen, setComments] = useState(false);
 
     return (
         <div className="post">
@@ -48,7 +51,7 @@ const Post = ({post}) => {
                         {!liked ? <ThumbUpOutlinedIcon /> : <ThumbUpOffAltRoundedIcon/>}
                         <span>Like</span>
                     </div>
-                    <div className="comment">
+                    <div className="comment" onClick={()=>setComments(!commentOpen)}>
                         <TextsmsOutlinedIcon />
                         <span>Comment</span>
                     </div>
@@ -57,6 +60,10 @@ const Post = ({post}) => {
                         <span>Share</span>
                     </div>
                 </div>
+
+                {/* PostComments: Comments */}
+                {/* {commentOpen && <Comments comments={commentOpen} />} */}
+                {commentOpen && <Comments/>}
             </div>
         </div>
     )

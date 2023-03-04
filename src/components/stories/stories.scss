@@ -2,6 +2,7 @@
 
 .stories{
     padding: 0 15px;
+    // z-index: -1;
 
     @include themify($themes){
         .container{
@@ -16,7 +17,7 @@
                 border: none;
                 height: 0.7px;
                 background-color: themed(borderColor);
-                opacity: 0.3;
+                opacity: 0.7;
             }
             
 

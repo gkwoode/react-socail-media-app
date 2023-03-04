@@ -1,0 +1,97 @@
+@import "../../style.scss";
+
+.comments{
+    @include themify($themes){
+        background-color: themed(bgColor);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .write{
+            // flex: 3;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+
+            img{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                object-fit: cover;
+                cursor: pointer;
+            }
+
+            input{
+                flex: 5;
+                border: none;
+                // outline: 1px solid themed(borderColor);
+                outline: none;
+                background-color: themed(bgColorSoft);
+                border-radius: 50px;
+                padding: 10px 20px;
+                color: themed(textColorSoft);
+                font-size: 16px;
+                cursor: text;
+            }
+
+            button{
+                border: none;
+                font-weight: 600;
+                cursor: pointer;
+                padding: 5px 10px;
+                border-radius: 5px;
+                cursor: pointer;
+                background-color: #0054b4;
+                color: white;
+            }
+        }
+
+        .comment{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: themed(bgColorSoft);
+
+            img{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                object-fit: cover;
+                cursor: pointer;
+            }
+
+            .commentInfo{
+                flex: 5;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-left: 10px;
+                color: themed(textColorSoft);
+                width: 100%;
+
+                .item{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    .name{
+                        font-weight: 500;
+                        cursor: pointer;
+                    }
+
+                    .time{
+                        font-size: 12px;
+                    }
+                }
+
+                .commentDesc{
+                    color: themed(textColorSoft);
+                }
+            }
+        }
+    }
+}
