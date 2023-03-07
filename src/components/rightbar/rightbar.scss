@@ -14,6 +14,10 @@
     color: themed(textColor);
     padding-top: 5px;
 
+    @include mobile{
+        display: none;
+    }
+
     &::-webkit-scrollbar{
         display: none;
     }

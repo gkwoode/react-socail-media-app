@@ -6,6 +6,10 @@
         background-color: themed(bgColorSoft);
         padding: 20px 20px;
 
+        @include mobile{
+            padding: 10px;
+        }
+
         .container{
             background-color: themed(bgColor);
         }

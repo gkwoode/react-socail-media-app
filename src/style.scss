@@ -3,6 +3,7 @@
   font-family: 'Roboto', sans-serif;
 }
 
+// Color Theme
 $themes: (
     light: (
         textColor: black,
@@ -11,6 +12,7 @@ $themes: (
         bgColor: white,
         logoColor: darkblue,
         borderColor: rgb(90, 90, 90, 0.3),
+        // profileLink: #252525,
     ),
     dark: (
         textColor: whitesmoke,
@@ -19,6 +21,7 @@ $themes: (
         bgColor: #101217,
         logoColor: white,
         borderColor: rgb(211, 211, 211, 0.3),
+        // profileLink: #f0f0f0,
     ),
 );
 
@@ -45,6 +48,7 @@ $themes: (
     @return map-get($theme-map, $key);
   }
   
+  // Media Queries
   @mixin mobile {
     @media (max-width: 480px) {
       @content;

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./login.scss";
 import { useContext } from "react";
 import { AuthContext } from "../../context/authAPI";
-// import background from "../../assets/background.jpg";
 
 const Login = () => {
     const {login} = useContext(AuthContext);
@@ -18,7 +17,8 @@ const Login = () => {
             {/* <img src={background} alt="" /> */}
             <div className="card">
                 <div className="left">
-                    <h1>WELCOME to GKsocial</h1>
+                    <h1>gksocial</h1>
+                    <img src="../../assets/login.png" alt="" />
                     <span>
                         Connect with family, friends and the world around you on GKsocial.
                     </span>
@@ -28,11 +28,15 @@ const Login = () => {
                     </Link>
                 </div>
                 <div className="right">
+                    <img src="../../assets/login.png" alt="" /> 
                     <h1>Login</h1>
                     <form action="">
                         <input type="email" placeholder="Email" />
                         <input type="passworrd" placeholder="Password" />
                         <button type="submit" onClick={handleLogin}>Login</button>
+                        <Link to="/register">
+                            <button type="submit">Register</button>
+                        </Link>
                         <span>Forget Password</span>
                     </form>
                 </div>

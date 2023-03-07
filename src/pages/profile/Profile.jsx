@@ -4,6 +4,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import PlaceIcon from '@mui/icons-material/Place';
+import Posts from "../../components/posts/Posts";
 
 const Profile = () => {
     return (
@@ -46,6 +47,20 @@ const Profile = () => {
                     </div>
                 </div>
             </div>
+
+            <hr />
+
+            <div className="profileLinks">
+                <a href="#">Posts</a>
+                <a href="#">About</a>
+                <a href="#">Friends</a>
+                <a href="#">Photos</a>
+            </div>
+
+            <hr />
+
+            {/* Call Post component */}
+            <Posts className="posts"/>
         </div>
     );
 }

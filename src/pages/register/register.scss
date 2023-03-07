@@ -1,85 +1,188 @@
+@import "../../style.scss";
+
 .register{
     height: 100vh;
-    // width: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(124, 233, 342, 0.5);
-    // background: url("/src/assets/background.jpg");
-    // background: url("https://www.pexels.com/photo/pens-near-keyboard-and-paper-clips-1558690");
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    // background: url("../../assets/background.jpg");
+
+    @include mobile{
+        background: white;
+    }
 
     .card{
         display: flex;
-        width: 50%;
+        width: 60%;
         border-radius: 15px;
-        min-height: 60%;
+        min-height: 70%;
         overflow: hidden;
-        display: flex;
         flex-direction: row-reverse;
 
-        .left{
-            flex: 1;  
-            // background: linear-gradient(rgba(1,1,1,0.5), rgba(25, 28, 22, 0.5)) url("https://pixabay.com/photos/student-typing-keyboard-text-woman-849822/") center;
-            // background-size: cover;
-            background: #fff999;
-            padding: 50px;
+        @include mobile{
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-
-            h1{
-                font-weight: 900;
-                line-height: 40px;
-            }
-            // span{}
-            // p{}
-            button{
-                width: 50%;
-                padding: 5px;
-                // border: none;
-                background-color: white;
-                font-weight: 900;
-                cursor: pointer;
-            }
+            width: 100%;
         }
 
-        .right{
+        @include tablet{
+            width: 90%;
+            height: 50%;
+        }
+
+        .form{
             flex: 1;
-            background: #fff;
-            padding: 50px;
+            background: white;
+            padding: 20px 50px;
             display: flex;
             flex-direction: column;
-            gap: 50px;
+            gap: 20px;
             justify-content: center;
 
+            @include tablet{
+                padding: 10px 30px;
+            }
+
             h1{
-                font-size:48px;
+                font-size: 36px;
+                font-weight: 900;
+                color: #32cd32;
+                position: relative;
+
+                &::before{
+                    content: "";
+                    font-weight: 900;
+                    height: 3px;
+                    width: 35px;
+                    position: absolute;
+                    background-color: #32cd32;
+                    bottom: 0;
+                    left: 0;
+                }
             }
 
             form{
                 display: flex;
                 flex-direction: column;
-                // justify-content: space-around;
-                gap: 24px;
+                gap: 15px;
 
-                input{
-                    padding: 15px 10px;
+                .name, .contact, .dobPsw{
+                    display: flex;
+                    justify-content: space-between;
 
-                    // input:focus{
-                    //     border: none;
-                    // }
-                }
-                input:focus{
-                    border: none;
+                    @include mobile{
+                        flex-direction: column;
+                        align-items: center;
+                        margin: 0 10px;
+                        gap: 15px;
+                    }
+
+                    @include tablet{
+                        align-items: center;
+                        gap: 15px;
+                    }
+
+                    input{
+                        width: 45%;
+                        border-radius: 5px;
+                        border: 1px solid #ccc;
+                        padding: 15px 10px;
+
+                        // &:focus{
+                            // outline: none;
+                        // }
+
+                        @include mobile{
+                            width: 100%;
+                            padding: 15px 10px;
+                            border-radius: 50px;
+                        }
+                    }
                 }
 
-                button{
-                    padding: 15px 10px;
-                    width: 50%;
-                    // font-size: large;
-                    font-weight: 900;
+                .gender{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 5px;
+                    align-items: center;
+                    justify-content: start;
+
+                    @include mobile{
+                        gap: 15px;
+                    }
+
+                    @include tablet{
+                        gap: 15px;
+                    }
+
+                    .male, .female{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 5px;
+                        border-radius: 5px;
+                        border: 1px solid #ccc;
+                        padding: 13px 10px;
+                        width: 20%;
+
+                        @include mobile{
+                            width: 100%;
+                            gap: 10px;
+                            border-radius: 50px;
+                        }
+
+                        @include tablet{
+                            width: 100%;
+                            gap: 10px;
+                        }
+                    }
                 }
-                // span{}
+
+                .button{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+                    margin-top: 20px;
+
+                    @include mobile{
+                        flex-direction: column;
+                        align-items: normal;
+                    }
+
+                    @include tablet{
+                        flex-direction: column;
+                        align-items: normal;
+                    }
+
+                    button{
+                        padding: 15px 50px;
+                        border: none;
+                        color: white;
+                        font-weight: 900;
+                        cursor: pointer;
+                        border-radius: 50px;
+
+                        &:first-child{
+                            background-color: #32cd32;
+                        }
+
+                        &:last-child{
+                            background-color: darkblue;
+                        }
+
+                        @include mobile{
+                            width: 100%;
+                            border-radius: 50px;
+                        }
+
+                        @include tablet{
+                            width: 100%;
+                            border-radius: 50px;
+                        }
+                    }
+                }
             }
         }
     }

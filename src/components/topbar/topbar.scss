@@ -6,6 +6,7 @@
         justify-content: space-between;
         align-items: center;
         height: 40px;
+        // width: 100vh; //Work on this
         padding: 10px 20px;
         background-color: themed(bgColor);
         border-bottom: 1px solid themed(borderColor);
@@ -19,6 +20,10 @@
         position:-o-sticky;
         position: sticky;
         z-index: 1;
+
+        @include mobile {
+            // width: 100%;
+        }
 
         // Left items
         .left{
@@ -45,6 +50,10 @@
                 height: 40px;
                 border-radius: 50%;
                 transition: 1s all ease-in-out;
+
+                @include mobile {
+                    display: none;
+                }
     
                 .icon{
                     font-size: 24px;
@@ -67,6 +76,10 @@
                 border-radius: 50px;
                 border: 1px solid themed(borderColor);
                 margin-left: 50px;
+
+                @include mobile{
+                    display: none;
+                }
 
                 .icon{
                     cursor: pointer;
@@ -103,6 +116,10 @@
                 height: 40px;
                 border-radius: 50%;
                 transition: 1s all ease-in-out;
+
+                @include mobile {
+                    display: none;
+                }
     
                 .icon{
                     font-size: 24px;
@@ -111,6 +128,19 @@
     
                 &:hover{
                     background-color: themed(bgColorSoft);
+                }
+            }
+
+            .mobileIcon{
+                @include mobile{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .icon{
+                        font-size: 24px;
+                        color: themed(textColor);
+                    }
                 }
             }
 
@@ -127,12 +157,17 @@
                     height: 40px;
                     border-radius: 50%;
                     object-fit: cover;
+                    
                 }
 
                 span{
                     font-size: 16px;
                     font-weight: 500;
                     color: themed(textColor);
+
+                    @include mobile {
+                        display: none;
+                    }
                 }
             }
         }

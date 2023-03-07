@@ -12,6 +12,7 @@ import { useContext } from "react";
 import { DarkModeContext } from "../../context/darkModeAPI";
 import { AuthContext } from "../../context/authAPI";
 
+
 const Topbar = () => {
     const {toggleDarkMode, darkMode} = useContext(DarkModeContext);
     const {currentUser} = useContext(AuthContext);
@@ -41,10 +42,10 @@ const Topbar = () => {
                 <div className="icons">
                     <PersonRoundedIcon className="icon"/>
                 </div>
-                <div className="icons">
+                <div className="icons mobileIcon">
                     <EmailRoundedIcon className="icon"/>
                 </div>
-                <div className="icons">
+                <div className="icons mobileIcon">
                     <NotificationsRoundedIcon className="icon"/>
                 </div>
                 <div className="user">

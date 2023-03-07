@@ -1,43 +1,85 @@
+@import "../../style.scss";
+
 .login{
     height: 100vh;
-    // width: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    // background: rgb(124, 233, 342, 0.5);
-    background: url("../../assets/background.jpg");
-    // background: url("https://www.pexels.com/photo/pens-near-keyboard-and-paper-clips-1558690");
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    // background: url("../../assets/background.jpg");
+
+    @include mobile{
+        background: white;
+    }
 
     .card{
         display: flex;
-        width: 50%;
+        width: 60%;
         border-radius: 15px;
         min-height: 60%;
         overflow: hidden;
 
-        .left{
-            flex: 1;  
-            // background: linear-gradient(rgba(1,1,1,0.5), rgba(25, 28, 22, 0.5)) url("https://pixabay.com/photos/student-typing-keyboard-text-woman-849822/") center;
-            // background-size: cover;
-            background: #fff999;
-            padding: 50px;
+        @include mobile{
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            width: 100%;
+        }
 
+        @include tablet{
+            width: 90%;
+        }
+
+        .left{
+            flex: 1;
+            background: whitesmoke;
+            padding: 30px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            // gap: 20px;
+
+            @include mobile{
+                display: none;
+            }
+
+            @include tablet{
+                padding: 30px 20px;
+            }
+            
             h1{
                 font-weight: 900;
                 line-height: 40px;
+                color: darkblue;
             }
-            // span{}
-            // p{}
+
+            img{
+                width: 100%;
+                height: 50%;
+                object-fit: cover;
+            }
+
+            span{
+                // font-size: 14px;
+                // color: darkblue;
+                padding: 10px 0;
+            }
+
+            p{
+                // font-size: 14px;
+                // color: darkblue;
+                padding: 10px 0;
+            }
+
             button{
-                width: 50%;
-                padding: 5px;
-                // border: none;
-                background-color: white;
+                width: 100%;
+                padding: 15px 10px;
+                border: none;
+                background-color: darkblue;
                 font-weight: 900;
+                color: white;
                 cursor: pointer;
+                border-radius: 50px;
+
             }
         }
 
@@ -50,34 +92,83 @@
             gap: 50px;
             justify-content: center;
 
+            @include mobile{
+                background: none;
+            }
+
+            @include tablet{
+                padding: 30px 20px;
+            }
+
+            img{
+                display: none;
+
+                @include mobile{
+                    display: block;
+                    width: 100%;
+                    height: 50%;
+                    object-fit: cover;
+                }
+            }
+
             h1{
-                font-size:48px;
+                font-size: 48px;
+                font-weight: 900;
+                color: #32cd32;
+                position: relative;
+
+                &::before{
+                    content: "";
+                    font-weight: 900;
+                    height: 3px;
+                    width: 50px;
+                    position: absolute;
+                    background-color: #32cd32;
+                    bottom: 0;
+                    left: 0;
+                }
             }
 
             form{
                 display: flex;
                 flex-direction: column;
-                // justify-content: space-around;
                 gap: 24px;
 
                 input{
                     padding: 15px 10px;
+                    border-radius: 50px;
+                    border: 1px solid #ccc;
 
-                    // input:focus{
-                    //     border: none;
-                    // }
-                }
-                input:focus{
-                    border: none;
+                //     &:focus{
+                //         border: none;
+                //     }
                 }
 
                 button{
                     padding: 15px 10px;
-                    width: 50%;
-                    // font-size: large;
+                    width: 100%;
                     font-weight: 900;
+                    cursor: pointer;
+                    // border-radius: 50px;
+                    background-color: #32cd32;
+                    border-radius: 50px;
+                    border: none;
+                    color: white;
+
+                    &:first-child{
+                        background-color: #32cd32;
+                        color: white;
+                    }
+
+                    &:last-child{
+                        background-color: darkblue;
+                        color: white;
+                    }
+
                 }
-                // span{}
+
+                // span{
+                // }
             }
         }
     }
