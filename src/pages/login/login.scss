@@ -163,6 +163,11 @@
                     &:last-child{
                         background-color: darkblue;
                         color: white;
+                        display: none;
+
+                        @include mobile{
+                            display: block;
+                        }
                     }
 
                 }
