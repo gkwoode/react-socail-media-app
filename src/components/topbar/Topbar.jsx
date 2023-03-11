@@ -26,7 +26,7 @@ const Topbar = () => {
                 <div className="icons">
                     <HomeRoundedIcon className="icon"/>
                 </div>
-                <div className="icons">
+                <div className="icons mobileIcon">
                     {darkMode ? <LightModeRoundedIcon className="icon" onClick={toggleDarkMode}/> :
                      <DarkModeRoundedIcon className="icon" onClick={toggleDarkMode}/>}
                 </div>
@@ -47,6 +47,10 @@ const Topbar = () => {
                 </div>
                 <div className="icons mobileIcon">
                     <NotificationsRoundedIcon className="icon"/>
+                </div>
+                <div className="darkThemeIcon mobileIcon">
+                    {darkMode ? <LightModeRoundedIcon className="icon" onClick={toggleDarkMode}/> :
+                     <DarkModeRoundedIcon className="icon" onClick={toggleDarkMode}/>}
                 </div>
                 <div className="user">
                     <img src={currentUser.profilePicture} alt="" />

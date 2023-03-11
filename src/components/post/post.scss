@@ -101,6 +101,14 @@
                 justify-content: space-between;
                 align-items: center;
                 padding: 0 50px;
+
+                @include mobile{
+                    padding: 0;
+                }
+
+                @include tablet{
+                    padding: 0;
+                }
     
                 .like, .comment, .share{
                     height: 35px;
@@ -116,6 +124,15 @@
                     color: themed(textColor);
                     transition: 1s all ease-in-out;
 
+                    @include mobile{
+                        gap: 5px;
+                    }
+
+                    @include tablet{
+                        gap: 5px;
+                        font-size: 14px;
+                    }
+
                     &:hover{  
                         // border-bottom: 1px solid themed(bgColorSoft);
                         background-color: themed(bgColorSoft);
@@ -124,12 +141,19 @@
             }
 
             hr{
-                margin: 10px 0;
                 border: none;
                 height: 0.7px;
                 background-color: themed(borderColor);
                 margin: 0 50px;
                 opacity: 0.7;
+
+                @include mobile{
+                    margin: 0;
+                }
+
+                @include tablet{
+                    margin: 0 20px;
+                }
             }
 
         }

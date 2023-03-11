@@ -3,7 +3,7 @@ import { AuthContext } from "../../context/authAPI";
 import { useContext } from "react";
 import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
 import AutoStoriesRoundedIcon from '@mui/icons-material/AutoStoriesRounded';
-import SubscriptionsRoundedIcon from '@mui/icons-material/SubscriptionsRounded';
+// import SubscriptionsRoundedIcon from '@mui/icons-material/SubscriptionsRounded';
 
 // Dummy data
 const stories = [ 
@@ -70,10 +70,11 @@ const Stories = () => {
                   <AutoStoriesRoundedIcon className='storyIcon' />
                   <span>Stories</span>
                 </div>
-                <div className="titleReel title">
+                {/* Update Reels */}
+                {/* <div className="titleReel title">
                   <SubscriptionsRoundedIcon className='reelIcon' />
                   <span>Reels</span>
-                </div>
+                </div> */}
               </div>
               <hr />
               <div className="storyContainer">

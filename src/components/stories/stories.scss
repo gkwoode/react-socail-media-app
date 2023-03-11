@@ -1,10 +1,9 @@
 @import '../../style.scss';
 
 .stories{
-    padding: 0 15px;
-    // z-index: -1;
-
     @include themify($themes){
+        padding: 0 15px;
+
         .container{
             border-radius: 10px;
             display: flex;
@@ -51,7 +50,11 @@
                 margin-bottom: 20px;
                 
                 @include mobile{
-                    
+                    height: 100px;
+                }
+
+                @include tablet{
+                    height: 120px;
                 }
 
                 // Cuurent User Story
@@ -93,6 +96,14 @@
                         p{
                             font-size: 14px;
                             font-weight: 500;
+
+                            @include mobile{
+                                display: none;
+                            }
+
+                            @include tablet{
+                                display: none;
+                            }
                         }
                     
                         .addIcon{
@@ -138,6 +149,14 @@
                         // font-size: 14px;
                         color: whitesmoke;
                         background-color: rgba(0,0,0,0.5);
+
+                        @include mobile{
+                            display: none;
+                        }
+
+                        @include tablet{
+                            display: none;
+                        }
                     }
                 }
             }

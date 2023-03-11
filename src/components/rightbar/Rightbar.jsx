@@ -29,7 +29,7 @@ const Rightbar = () => {
                             <img src={gkw} alt="" />
                             <span>Nathan Yennupiak</span>
                         </div>
-                        <div className="buttons">
+                    <div className="buttons">
                             <button className='accept'>Accept</button>
                             <button className='decline'>Decline</button>
                         </div>

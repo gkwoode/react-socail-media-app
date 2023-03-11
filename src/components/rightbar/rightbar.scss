@@ -18,6 +18,10 @@
         display: none;
     }
 
+    @include tablet{
+        display: none;
+    }
+
     &::-webkit-scrollbar{
         display: none;
     }
@@ -137,6 +141,9 @@
 
                 // style time updates on latest activities
                 .time{
+                    display: flex;
+                    justify-content: flex-end;
+                    right: 0;
                     font-size: 14px;
                     font-weight: normal;
                     color: themed(textColorSoft);

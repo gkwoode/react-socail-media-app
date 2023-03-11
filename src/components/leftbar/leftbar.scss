@@ -17,6 +17,10 @@
         display: none;
     }
 
+    @include tablet{
+        flex: 3;
+    }
+
     &::-webkit-scrollbar{
         display: none;
     }

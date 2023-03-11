@@ -15,7 +15,7 @@ const Register = () => {
                         </div>
                         <div className="contact">
                             <input type="email" id="email" name="name" placeholder="Email" required/>
-                            <input type="tel" id="number" name="number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Phone Number" required/>
+                            <input type="tel" id="number" name="number" placeholder="Phone Number" required/>
                         </div>
                         <div className="dobPsw">
                             <input type="date" id="dob" name="dob" placeholder="Date of Birth" required/>

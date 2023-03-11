@@ -37,6 +37,12 @@
                     align-items: center;
                 }
 
+                @include tablet{
+                    margin: 0 20px;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
                 img{
                     width: 150px;
                     height: 150px;
@@ -49,6 +55,16 @@
                     box-shadow: 0px 1px 1px 3px themed(borderColor);
                     -webkit-box-shadow: 0px 3px 1x 1px themed(borderColor);
                     -moz-box-shadow: 0px 1px 3px 1px themed(borderColor);
+
+                    @include mobile{
+                        margin-top: -75px;
+                    }
+
+                    @include tablet{
+                        margin-top: -55px;
+                        width: 120px;
+                        height: 120px;
+                    }
                 }
 
                 .profileDetails{
@@ -72,7 +88,11 @@
                         gap: 25px;
 
                         @include mobile{
-                            // flex-direction: column;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+
+                        @include tablet{
                             justify-content: space-between;
                             align-items: center;
                         }
@@ -120,6 +140,10 @@
             height: 0.7px;
             background-color: themed(borderColor);
             opacity: 0.7;
+
+            @include tablet{
+                margin: 0 25px;
+            }
         }
 
         .profileLinks{
@@ -127,6 +151,14 @@
             justify-content: space-around;
             align-items: center;
             // padding: 0 100px;
+
+            @include mobile{
+                margin: 0 40px;
+            }
+
+            @include tablet{
+                margin: 0 30px;
+            }
 
             a{
                 display: flex;
@@ -143,9 +175,15 @@
                 transition: 1s ease-in-out;
 
                 @include mobile{
-                    // width: 25%;
+                    width: 70px;
                     height: 30px;
                     font-size: 14px;
+                }
+
+                @include tablet{
+                    width: 60px;
+                    height: 30px;
+                    font-size: 16px;
                 }
 
                     &:hover{  
@@ -156,6 +194,14 @@
 
         .posts{
             padding: 0 25px;
+
+            @include mobile{
+                padding: 0;
+            }
+
+            @include tablet{
+                padding: 0 10px;
+            }
         }
     }
 }

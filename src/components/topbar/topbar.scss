@@ -6,7 +6,7 @@
         justify-content: space-between;
         align-items: center;
         height: 40px;
-        // width: 100vh; //Work on this
+        // width: 100vw; //Work on this
         padding: 10px 20px;
         background-color: themed(bgColor);
         border-bottom: 1px solid themed(borderColor);
@@ -23,6 +23,7 @@
 
         @include mobile {
             // width: 100%;
+            padding: 10px 15px;
         }
 
         // Left items
@@ -33,11 +34,23 @@
             justify-content: flex-start;
             gap: 10px;
 
+            @include tablet {
+                gap: 5px;
+            }
+
             span{
                 font-size: 30px;
                 font-weight: 600;
                 color: themed(logoColor);
                 padding-right: 55px;
+
+                @include mobile {
+                    padding-right: 0;
+                }
+
+                @include tablet {
+                    padding-right: 10px;
+                }
             }
 
             .icons{
@@ -52,6 +65,10 @@
                 transition: 1s all ease-in-out;
 
                 @include mobile {
+                    display: none;
+                }
+
+                @include tablet {
                     display: none;
                 }
     
@@ -81,6 +98,11 @@
                     display: none;
                 }
 
+                @include tablet{
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+
                 .icon{
                     cursor: pointer;
                     // color: themed(textColorSoft);
@@ -94,6 +116,10 @@
                     font-size: 16px;
                     width: 300px;
                     color: themed(textColor);
+
+                    @include tablet{
+                        width: 120px;
+                    }
                 }
             }
         }
@@ -105,6 +131,10 @@
             align-items: center;
             justify-content: flex-end;
             gap: 10px;
+
+            @include tablet {
+                gap: 5px;
+            }
 
             .icons{
                 display: flex;
@@ -120,6 +150,10 @@
                 @include mobile {
                     display: none;
                 }
+
+                @include tablet {
+                    display: none;
+                }
     
                 .icon{
                     font-size: 24px;
@@ -131,8 +165,29 @@
                 }
             }
 
+            .darkThemeIcon{
+                display: none;
+            }
+
             .mobileIcon{
                 @include mobile{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .icon{
+                        font-size: 24px;
+                        color: themed(textColor);
+                    }
+                }
+
+                @include tablet{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -152,6 +207,14 @@
                 cursor: pointer;
                 margin-left: 30px;
 
+                @include mobile {
+                    margin-left: 10px;
+                }
+
+                @include tablet {
+                    margin-left: 10px;
+                }
+
                 img{
                     width: 40px;
                     height: 40px;
@@ -168,30 +231,12 @@
                     @include mobile {
                         display: none;
                     }
+
+                    @include tablet {
+                        display: none;
+                    }
                 }
             }
         }
-
-        // .icons{
-        //     display: flex;
-        //     align-items: center;
-        //     justify-content: center;
-        //     gap: 20px;
-        //     cursor: pointer;
-        //     object-fit: cover;
-        //     width: 40px;
-        //     height: 40px;
-        //     border-radius: 50%;
-        //     transition: 1s all ease-in-out;
-
-        //     .icon{
-        //         font-size: 24px;
-        //         color: themed(textColor);
-        //     }
-
-        //     &:hover{
-        //         background-color: themed(bgColorSoft);
-        //     }
-        // }
     }
 } 
