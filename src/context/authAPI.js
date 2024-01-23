@@ -9,7 +9,7 @@ export const AuthContextProvider = ({ children }) => {
     );
 
     const login = () => {
-        setCurrentUser({ id: 1, name: "Linda Arthur", profilePicture:"https://images.pexels.com/photos/3992656/pexels-photo-3992656.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" });
+        setCurrentUser({ id: 1, name: "John Doe", profilePicture:"https://images.pexels.com/photos/3992656/pexels-photo-3992656.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" });
     }
 
     useEffect(() => {

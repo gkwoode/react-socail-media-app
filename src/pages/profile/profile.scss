@@ -29,7 +29,7 @@
             .profileDesc{
                 display: flex;
                 justify-content: space-between;
-                align-items: end;
+                align-items: flex-end;
                 margin: 0 30px;
 
                 @include mobile{
@@ -84,7 +84,7 @@
                         font-size: 16px;
                         color: themed(textColor);
                         display: flex;
-                        align-items: end;
+                        align-items: flex-end;
                         gap: 25px;
 
                         @include mobile{
